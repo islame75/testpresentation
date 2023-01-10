@@ -1,0 +1,579 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/zenburn.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Our broject backend</h2>
+				</section>
+				<section>
+					<h2>boukhalfa khaled islam</h2>
+					<h2>mohamed benkheira kamal</h2>
+					<h2>mr: nahar atia</h2>
+				</section>
+				
+				<section>
+					<h2>makan</h2>
+					<p>The idea is simple . makan is a middleman between the seller and the costumer which both benefits by saving time
+					,effort and money by not hiring a real middleman which can cost extra money</p>
+					
+					
+				</section>
+				<section>
+					<h2>Site features</h2>
+					<p>• Easy access to houses whether for rent or for sale</p>
+					<p>• Equal chances for every body to find a a proper place</p>
+					<p>• Easy search and customization to find what suits you in moments </p>
+					<p>• The users can use the site to rent their shops , Furnished Apartments , motels hotels ect.. </p>
+				</section>
+				<section>
+					<h4>People can find places to stay in special or emergency cases without being used to pay large sums of money</h4>
+
+				</section>
+				<section>
+					<h2>front End</h2>
+				</section>
+				<section>
+					<h2>front End</h2>
+					<h3>html</h3>
+					<h3>css</h3>
+					<h3>javascript</h3>
+				</section>
+				<section data-auto-animate>
+					<h2>front End</h2>
+					<p>we style all the website in one file <em>main.css</em> </p>
+					<p>work with section every section has his own style</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						<section class="landing-page">
+							...
+						</section>
+										</code></pre>
+				</section>
+				<section  data-auto-animate>
+					<h1>like you see</h1>
+					<h3>html</h3>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+											<section class="landing-page">
+												<form action="">
+												...
+												</form>
+											</section>
+															</code></pre>
+					<h3>css</h3>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						.landing-page form {
+							background-color:red;
+						}
+															</code></pre>
+				</section>
+				<section>
+					<h5>we have different Theme </h5>
+					<p>we use the local storage that mean even when you close you browse </p>
+					<p>you will have you favorite theme</p>
+				</section>
+				<section data-auto-animate  data-background="#2386C8">
+					<h4>theme 1</h4>
+					
+					<img src="images/theme 1.jpg" alt="">
+				</section>
+				<section data-auto-animate  data-background="#EF9A53">
+					<h4>theme 2</h4>
+					<img src="images/theme 2jpg.jpg" alt="">
+				</section>
+				<section  data-auto-animate data-background="#367E18">
+					<h4>theme 3</h4>
+					<img src="images/theme 3.jpg" alt="">
+				</section>
+				<section data-auto-animate  data-background="#444">
+					<h4>theme 4</h4>
+					<img src="images/theme 4.jpg" alt="">
+				</section>
+				<section data-auto-animate>
+					<h3>how we do it</h3>
+					<h6>html</h6>
+			<pre data-id="code-aanimation"><code class="hljs" data-trim data-line-numbers>
+				<button id="theme-chose"><i class="uil uil-setting"></i>
+					<div class="theme">
+						...
+					</div>
+				</button>
+									</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h6>html</h6>
+					<pre data-id="code-aanimation"><code class="hljs" data-trim data-line-numbers>
+						<button id="theme-chose"><i class="uil uil-setting"></i>
+							<div class="theme">
+								<ul class="theme-select">
+									<li class="active" data-color="#1663bd" data-hover="#2386C8"></li>
+									<li data-color="#FF6E31" data-hover="#EF9A53"></li>
+									<li data-color="#1A4D2E" data-hover="#367E18"></li>
+									<li data-color="#222" data-hover="#444"></li>
+								</ul>
+						</button>
+					</code></pre>
+					
+					<h6>css</h6>
+			<pre ><code class="hljs" data-trim data-line-numbers>
+				:root {
+					--primary-color: #1663bd;
+					--hover-bg: #2386C8;
+					--color-clicked: #2386C8 ;
+				}
+									</code></pre>
+				</section>
+				<section data-auto-animate>
+
+					<h6>html</h6>
+					<pre data-id="code-aanimation"><code class="hljs" data-trim data-line-numbers>
+											<button id="theme-chose"><i class="uil uil-setting"></i>
+												<div class="theme">
+													<ul class="theme-select">
+														<li class="active" data-color="#1663bd" data-hover="#2386C8"></li>
+														<li data-color="#FF6E31" data-hover="#EF9A53"></li>
+														<li data-color="#1A4D2E" data-hover="#367E18"></li>
+														<li data-color="#222" data-hover="#444"></li>
+													</ul>
+											</button>
+										</code></pre>
+					<h6>js</h6>
+					<pre><code class="hljs" data-trim data-line-numbers>
+									let lis = document.querySelectorAll(".theme-select li");
+									let root = document.querySelector(':root');
+									let rootstyles = getComputedStyle(root);
+									let primaryColor = rootstyles.getPropertyValue('--primary-color');
+														</code></pre>
+
+
+				</section>
+
+								<section data-auto-animate>
+									<h2 data-id="code-title">js</h2>
+									<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|2,3-6|8-9|11-13|15-18"><script type="text/template">
+		lis.forEach((li) => {
+			li.addEventListener("click", (e) => {
+				// REMOVE ACTIVE CLASS FROM ALL LIS
+					lis.forEach((li) => {
+					li.classList.remove("active");
+				});
+
+				// ADD ACTIVE CLASS TO CURRENT ELEMENT
+				e.currentTarget.classList.add("active");
+
+				// ADD CURRENT COLOR TO LOCAL STORAGE
+				window.localStorage.setItem("color", e.currentTarget.dataset.color);
+				window.localStorage.setItem("hover", e.currentTarget.dataset.hover);
+
+				//   show.style.backgroundColor = e.currentTarget.dataset.color;
+				root.style.setProperty('--primary-color', e.currentTarget.dataset.color);
+				root.style.setProperty('--hover-bg', e.currentTarget.dataset.hover);
+				root.style.setProperty('--color-clicked', e.currentTarget.dataset.hover);
+			});
+		});
+																	</script></code></pre>
+								</section>
+								<section data-auto-animate>
+									<h2 data-id="code-title">js</h2>
+										<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|2,3-6|8-9|11-13"><script type="text/template">
+if (window.localStorage.getItem("color")) {
+	// if there is color in local storage
+	// add color to div
+	root.style.setProperty('--primary-color', window.localStorage.getItem("color"));
+	root.style.setProperty('--hover-bg', window.localStorage.getItem("hover"));
+	root.style.setProperty('--color-clicked', window.localStorage.getItem("hover"));  
+	// remove active class from all lis
+	lis.forEach((li) => {
+	li.classList.remove("active");
+});
+// add active class to current color
+document.querySelector(`
+[data-color="${window.localStorage.getItem("color")}"]
+`).classList.add("active");
+}
+
+
+lis.forEach((li) => {
+	li.addEventListener("click", (e) => {
+		// REMOVE ACTIVE CLASS FROM ALL LIS
+			lis.forEach((li) => {
+			li.classList.remove("active");
+		});.....
+																											</script></code></pre>
+										</section>
+										<section>
+											<h3>also we have fade transition between pages </h3>
+											 <h5>css</h5>
+											<pre><code class="hljs" data-trim data-line-numbers>
+																				.transition-1 {
+																				position: fixed;
+																				top: 0;
+																				left: 0;
+																				right: 0;
+																				bottom: 0;
+																				z-index: 101;
+																				background-color: #222;
+																				opacity: 0;
+																				pointer-events: none;
+																				transition: 0.5s ease-out;
+																				}
+																				
+																				.transition-1.is-active {
+																				pointer-events: all;
+																				opacity: 1;
+																				}
+																									</code></pre>
+										</section>
+										<section>
+											<p>just by adding this class into html we have that transition</p>
+											<h5>html</h5>
+											<pre><code class="hljs" data-trim data-line-numbers>
+  					 							<div class="transition transition-1 is-active"></div>
+											</code></pre>
+										</section>
+										<section>
+											<p>but there is some JavaScript</p>
+											<h5>js</h5>
+											<pre><code class="hljs" data-trim data-line-numbers>
+													window.onload = () => {
+													const transition_el = document.querySelector('.transition');
+													setTimeout(() => {
+													transition_el.classList.remove('is-active');
+													}, 500);
+												</code></pre>
+										</section>
+								<section data-auto-animate>
+											<h4>now let's talke about: </h4>
+											<h4>backend</h4>
+										</section>
+								<section data-auto-animate>
+											<h4>backend</h4>
+											<h3>php</h3>
+											<h3>mysql</h3>
+										</section>
+										<section data-auto-animate>
+											<h3>mysql</h3>
+											<p>we use mysql for database </p>
+											<p>we have four table in our database</p>
+										</section>
+										<section data-auto-animate>
+											<p>we have four table in our database</p>
+											<img src="images/Screenshot 2023-01-07 091624.jpg" alt="">
+									</section>
+								<section data-auto-animate>
+											<p>we have realtion between them </p>
+											<h4>sql</h4>
+											<pre><code class="hljs" data-trim data-line-numbers>
+																	ALTER TABLE posts ADD CONTRAINT post_wilay FOREIGN KEY (wilay_id) 
+																	FEFERENCES wilay (w_id) ON DELETE CASCADE;						
+
+																	ALTER TABLE posts ADD CONTRAINT post_user FOREIGN KEY (user_id)
+																	 FEFERENCES users (id) ON DELETE CASCADE;						
+
+																	ALTER TABLE images ADD CONTRAINT images_post FOREIGN KEY (post_id)
+																	 FEFERENCES posts (post_id) ON DELETE CASCADE;						
+																	</code></pre>
+										</section>
+								<section data-auto-animate>
+											<p>we have realtion between them </p>
+											<img src="images/Screenshot 2023-01-07 091723.jpg" alt="">
+											</section>
+								<section data-auto-animate>
+									<h3>now php</h3>
+									<p>in php we use <b>mysqli</b> for connection</p>
+								</section>			
+								<section data-auto-animate>
+									<p>in php we use <b>mysqli</b> for connection</p>
+									<h3>php</h3>
+									<pre><code class="hljs" data-trim data-line-numbers>
+										define('ROOT', 'http://localhost/place/');
+										// conect to the database
+										define('DB_HOST', 'localhost');
+										define('DB_USER', 'root');
+										define('DB_PASS', '');
+										define('DB_NAME', 'place');
+										
+										$connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+										if (mysqli_errno($connection)) {
+											die(mysqli_error($connection));
+										}									
+										</code></pre>
+									</section>
+
+									<section data-auto-animate>
+										<h2>now we see how we insert posts</h2>
+											<h2>and fetch them from databse</h2>
+										<p>every post have multiple images</p> 
+									</section>
+
+									
+									<section data-auto-animate>
+									<h2>now we see how we insert posts</h2>
+									<p>this is signup form </p>
+											<h4>php</h4>
+											<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|1|6-14|17-25|26-33|34-44|"><script type="text/template">
+																				<form action="<?= ROOT ?>add-post-logic.php" method="POST" enctype="multipart/form-data">
+																					<div class="form-inputs">
+																						<label for="title">
+																							العنوان
+																						</label>
+																						<input class="input-f" type="text" required placeholder="اعط عنوان للمنشور" name="title" autofocus minlength="5"
+																							maxlength="50">
+																						<div id="select">
+																							<div>
+																								<label for="sellOrRent">نوع المعاملة</label>
+																								<select class="one" id="sellORrent" name="type">
+																									<option value="للكراء">كراء</option>
+																									<option value="للبيع">بيع</option>
+																								</select>
+																							</div>
+																							<div>
+																								<label for="wilaya">الولاية</label>
+																								<select class="one" id="wilaya" name="wilaya">
+																									<option value="1">الجلفة</option>
+																									<option value="2">وهران</option>
+																									<option value="3">الجزائر</option>
+																									<option value="4">بومرداس</option>
+																								</select>
+																							</div>
+																						</div>
+																						<label for="price">
+																							السعر
+																						</label>
+																						<input type="number" required placeholder="السعر" name="price" minlength="1">
+																						<div><label for="description">الوصف</label></div>
+																						<div id="desc">
+																							<textarea name="body" id="description" placeholder="اكتب شيئا ..."></textarea>
+																						</div>
+																						<div class="uploadimages-pick">
+																							<output class="uploadimages" id="result">
+																							</output>
+																							<div class="uploadimages-btn custom-input-file">
+																								اضف صور
+																								<input type="file" name="files[]" id="files" multiple accept="image/jpeg, image/png, image/jpg">
+																							</div>
+																						</div>
+																					</div>
+																					<input class="btn" type="submit" name="submit" value="انشاء منشور" />
+																				</form>
+																	</script></code></pre>
+																</section>
+										<section data-auto-animate>
+											<h2>now we see how we insert posts</h2>
+											<img src="images/signup.jpg" alt="">
+										</section>
+
+									<section data-auto-animate>
+									<h2>now we see how we insert posts</h2>
+									<p>this is the logic of insert post</p>
+											<h4>php</h4>
+											<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|1-2|64-68|3-10|11-24|25-30|31-34|35-36|37-42|43-56|57-60|"><script type="text/template">
+	// get signup form data if submit button was clicked
+	if (isset($_POST['submit'])) {
+   // ASSIGN the inputs Here  AND SANITIZE THEM TO AVOID ANY SQL INJECTION
+   $user_id = $_SESSION['user-id'];
+   $title = filter_var($_POST['title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+   $wilay = filter_var($_POST['wilaya'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+   $type = filter_var($_POST['type'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+   $price = filter_var($_POST['price'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+   $body = filter_var($_POST['body'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+   $images = $_FILES['files'] ;
+   // validate Inputs
+   if (!$title) {
+   $_SESSION['add-post'] = "يرجى ملئ جميع الحقول";
+   } elseif (!$wilay) {
+   $_SESSION['add-post'] = "يرجى ملئ جميع الحقول";
+   } elseif (!$body) {
+   $_SESSION['add-post'] = "يرجى ملئ جميع الحقول";
+   } elseif (!$type) {
+   $_SESSION['add-post'] = "يرجى ملئ جميع الحقول";
+   } elseif (!$price) {
+   $_SESSION['add-post'] = "يرجى ملئ جميع الحقول";
+   } elseif (!$images) {
+   $_SESSION['add-post'] = "يرجى ملئ جميع الحقول";
+   } else {
+      // REDIRECT back (with form data) to add-pst page if there is any problem
+      if (isset($_SESSION['add-post'])) {
+         $_SESSION['add-post-data'] = $_POST;
+         header('location: ' . ROOT . 'add-post.php');
+         die();
+      } else {
+         // insert post into database
+         $query = "INSERT INTO posts (title, body, price, wilay_id, user_id, type )
+   VALUES ('$title', '$body', '$price', $wilay, $user_id, '$type') ";
+	$result = mysqli_query($connection, $query);
+	// Get tha current post id 
+	$curPostId = $connection->insert_id;
+	// INsert Images into database images table
+	foreach ($_FILES['files']['tmp_name'] as $key => $tmp_name) {
+		$file_name = $key . $_FILES['files']['name'][$key];
+		$file_size = $_FILES['files']['size'][$key];
+		$file_tmp = $_FILES['files']['tmp_name'][$key];
+		$file_type = $_FILES['files']['type'][$key];
+		// make each imgae name unique with time function
+		$time = time(); 
+		$thumbnail_name = $time . $file_name;
+		$thumbnail_tmp_name = $file_tmp;
+		$thumbnail_destination_path = 'images/' . $thumbnail_name;
+		move_uploaded_file($thumbnail_tmp_name, $thumbnail_destination_path);
+		$imageQuery = "INSERT into images (`post_id`,`imageName`) VALUES($curPostId,'$thumbnail_name'); ";
+		$imageResult = mysqli_query($connection, $imageQuery);
+		if (mysqli_errno($connection)) {
+				$_SESSION['add-post'] = "حدثت مشكلة اثناء اضافة المنشور";
+				header('location: ' . ROOT);
+				die();
+		}
+	}
+	if (!mysqli_errno($connection)) {
+		$_SESSION['add-post-success'] = "تم اضافة منشور جديد";
+		header('location: ' . ROOT . 'profil.php');
+		die();
+	}
+}
+}
+} else {
+// if button wasn't clicked, bounce back to signup page
+header('location: ' . ROOT . 'signup.php');
+die();
+}
+
+																	</script></code></pre>
+										</section>
+										<section data-auto-animate>
+											<h2>now we see how we insert posts</h2>
+											<img src="images/postjpg.jpg" alt="">
+										</section>
+									<section data-auto-animate>
+									<h2>now we see how we fetch posts from database</h2>
+									<p>this is the logic of fetch post from db</p>
+											<h4>php</h4>
+											<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers=""><script type="text/template">
+	<?php
+include 'conponent/header.php';
+$query = "SELECT * FROM posts, wilay, users WHERE posts.user_id = users.id AND
+	posts.wilay_id = wilay.w_id  ORDER BY posts.data_time DESC ";
+$posts = mysqli_query($connection, $query);
+?>
+																	</script></code></pre>
+										</section>
+									<section data-auto-animate>
+									
+									<p>this is the logic of fetch post from db</p>
+											<h4>php</h4>
+											<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers=""><script type="text/template">
+<div class="posts-parent">
+            <?php while ($post = mysqli_fetch_assoc($posts)) : ?>
+                <?php if ($post['type'] == "للبيع") : ?>
+                    <div class="post  type-all type-buy">
+                    <?php else : ?>
+                        <div class="post  type-all type-rent">
+                        <?php endif ?>
+                        <div class="post-header">
+                            <div class="type ">
+                                <?= $post['type'] ?>
+                            </div>
+                            <div class="post_author">
+                                <div class="post_author-info">
+                                    <h5>
+                                        <?= $post['name'] ?>
+                                    </h5>
+                                    <small><?= date("H:i - d M, y", strtotime($post['data_time'])) ?></small>
+                                </div>
+                                <a href="<?= ROOT ?>user_profil.php?id=<?= $post['user_id'] ?>">
+                                    <div class="avatar">
+                                        <img src="./images/<?= $post['avatar'] ?>" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="images">
+                            <?php
+                            // fetch author from users table using author_id Emax editor  P5tutorial
+                            $post_id = $post['post_id'];
+                            $imageQuery = "SELECT * FROM `images` WHERE $post_id  = images.post_id LIMIT 1";
+                            $image_result = mysqli_query($connection, $imageQuery);
+                            $image = mysqli_fetch_assoc($image_result);
+                            ?>
+                            <img src="<?= ROOT ?>images/<?= $image['imageName'] ?>" alt="">
+                        </div>
+                        <a href="<?= ROOT ?>singl-post.php?id=<?= $post['post_id'] ?>" class="title">
+                            <div>
+                                <?php if (strlen($post['title']) >= 50) : ?>
+                                    <?= substr($post['title'], 0, 40) ?> ...
+                                <?php else : ?>
+                                    <?= $post['title'] ?>
+                                <?php endif ?>
+                            </div>
+                        </a>
+                        <div class="description">
+                            <?php if (strlen($post['body']) >= 200) : ?>
+                                <?= substr($post['body'], 0, 150) ?> ...
+                            <?php else : ?>
+                                <?= $post['body'] ?>
+                            <?php endif ?>
+                        </div>
+                        <div class="post_footer">
+                            <div class="price">
+                                <?= $post['price']  ?>
+                                دج
+                            </div>
+                            <div class="wilay">
+                                <?= $post['wilayName']  ?>
+                            </div>
+                        </div>
+                        </div>
+                    <?php endwhile ?>
+                    </div>
+        
+																	</script></code></pre>
+										</section>
+										<section data-auto-animate>
+											<h2>posts</h2>
+											<img src="images/posts.jpg" alt="">
+										</section>
+
+
+
+
+
+
+									<section>
+										<h2>the end </h2>
+									</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+					backgroundTransition: 'zoom',
+					
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
