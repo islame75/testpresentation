@@ -4,33 +4,50 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>khaled & mohamed</title>
-
+		<title>khaled&mohamed</title>
+		<link rel="icon" href="images/webicon.png" type="image/icon type">
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/league.css">
 
 		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/zenburn.css">
+		<link rel="stylesheet" href="plugin/highlight/gruvbox dark hard.css">
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1>Our broject</h1>
+					<h3>
+							السلام عليكم
+					</h3>
+				</section>
+				<section data-background-image="images/background image.jpg">
+					<img src="images/first design.png" alt="" >
 				</section>
 				<section>
-					<h2>boukhalfa khaled islam</h2>
-					<h2>benkheira mohamed  kamal</h2>
-					<h2>mr: nahar attia</h2>
+					<p><em>Benkheira Mohamed Kamal</em></p>
+					<p><em>Boukhalfa Khaled Islam</em></p>
+					<br>
+					<p>Dr: Nahar Attia</p>
+					<p>Dr: Selt R </p>
 				</section>
-				
+				<section>
+					<p>You Can Follow Along With Us </p>
+					<img src="images/QR.png" alt=""  height="500 ">
+				</section>
+				<section>
+					<video  controls style="object-fit: cover;" src="images/walking through makan.mp4"></video>
+				</section>
 				<section>
 					<h2>makan</h2>
-					<p>The idea is simple . makan is a middleman between the seller and the costumer which both benefits by saving time
-					,effort and money by not hiring a real middleman which can cost extra  </p>
-					
-					
+					<p>Makan is a website that allows users to advertise their apartments or houses, whether for sale or rent, as it
+					specializes in real estate trading (apartments, buildings, shops, houses...etc.)
+					The site offers two services:</p>
+				</section>
+				<section>
+					<p>• Advertising service: You can advertise your apartment or shop for sale or rent to thousands of users</p>
+					<p>• Buying or renting service: any user can find suitable apartments or shops for sale or rent without the need for a
+						broker or paying any additional costs</p>
 				</section>
 				<section>
 					<h2>Site features</h2>
@@ -40,12 +57,19 @@
 					<p>• The users can use the site to rent their shops , Furnished Apartments , motels hotels ect.. </p>
 				</section>
 				<section>
-					<h4>People can find places to stay in special or emergency cases without being used to pay large sums of money</h4>
+					<h4><blockquote cite="http://www.worldwildlife.org/who/index.html">
+						People can find places to sleep in emergency cases without paying a lot of money or being exploited by brokers</q>
+						</blockquote></h4>
 
 				</section>
+				
+					<section data-background-image="images/background image.jpg">
+						<img src="images/DESING SECTION YOUOUOU.png" alt="">
+					</section>
 				<section>
 					<h1>design section</h1>
 				</section>
+				
 				<section>
 					<p>we designed the site to be as simple as it can for everybody to use and it will always stay user friendly ,</p>
 				</section>
@@ -67,19 +91,21 @@
 				</section>
 
 				
-				
-				
-				<section>
+
+				<section data-background-image="images/background image.jpg">
+					<img src="images/FRONT END SECTION LJLJL.png" alt="">
+				</section>
+				<section data-auto-animate>
 					<h1>front End</h1>
 				</section>
-				<section>
+				<section data-auto-animate>
 					<h1>front End</h1>
 					<h3>html</h3>
 					<h3>css</h3>
 					<h3>javascript</h3>
 				</section>
 				<section data-auto-animate>
-					<h2>front End</h2>
+					<h1>front End</h1>
 					<p>we style all the website in one file <em>main.css</em> </p>
 					<p>work with section every section has its own style</p>
 					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
@@ -181,7 +207,7 @@
 									let root = document.querySelector(':root');
 									let rootstyles = getComputedStyle(root);
 									let primaryColor = rootstyles.getPropertyValue('--primary-color');
-														</code></pre>
+					</code></pre>
 
 
 				</section>
@@ -203,7 +229,7 @@
 				window.localStorage.setItem("color", e.currentTarget.dataset.color);
 				window.localStorage.setItem("hover", e.currentTarget.dataset.hover);
 
-				//   show.style.backgroundColor = e.currentTarget.dataset.color;
+				//  update  root colors  here 
 				root.style.setProperty('--primary-color', e.currentTarget.dataset.color);
 				root.style.setProperty('--hover-bg', e.currentTarget.dataset.hover);
 				root.style.setProperty('--color-clicked', e.currentTarget.dataset.hover);
@@ -213,10 +239,10 @@
 								</section>
 								<section data-auto-animate>
 									<h2 data-id="code-title">js</h2>
-										<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|2,3-6|8-9|11-13"><script type="text/template">
+										<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|2,3-6|8-9|11-15|18-23|"><script type="text/template">
 if (window.localStorage.getItem("color")) {
 	// if there is color in local storage
-	// add color to div
+	// fetch colors from local storage and set the root colors
 	root.style.setProperty('--primary-color', window.localStorage.getItem("color"));
 	root.style.setProperty('--hover-bg', window.localStorage.getItem("hover"));
 	root.style.setProperty('--color-clicked', window.localStorage.getItem("hover"));  
@@ -255,11 +281,9 @@ lis.forEach((li) => {
 																				pointer-events: none;
 																				transition: 0.5s ease-out;
 																				}
-																				
 																				.transition-1.is-active {
 																				pointer-events: all;
-																				opacity: 1;
-																				}
+																				opacity: 1;}
 																									</code></pre>
 										</section>
 										<section>
@@ -279,6 +303,9 @@ lis.forEach((li) => {
 													transition_el.classList.remove('is-active');
 													}, 500);
 												</code></pre>
+										</section>
+										<section data-background-image="images/background image.jpg">
+											<img src="images/BACKEND SECT ION.png" alt="">
 										</section>
 								<section data-auto-animate>
 											<h4>now let's talk about: </h4>
@@ -351,50 +378,50 @@ lis.forEach((li) => {
 									<p>this is signup form </p>
 											<h4>php</h4>
 											<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|1|6-14|17-25|26-33|34-44|"><script type="text/template">
-																				<form action="<?= ROOT ?>add-post-logic.php" method="POST" enctype="multipart/form-data">
-																					<div class="form-inputs">
-																						<label for="title">
-																							العنوان
-																						</label>
-																						<input class="input-f" type="text" required placeholder="اعط عنوان للمنشور" name="title" autofocus minlength="5"
-																							maxlength="50">
-																						<div id="select">
-																							<div>
-																								<label for="sellOrRent">نوع المعاملة</label>
-																								<select class="one" id="sellORrent" name="type">
-																									<option value="للكراء">كراء</option>
-																									<option value="للبيع">بيع</option>
-																								</select>
-																							</div>
-																							<div>
-																								<label for="wilaya">الولاية</label>
-																								<select class="one" id="wilaya" name="wilaya">
-																									<option value="1">الجلفة</option>
-																									<option value="2">وهران</option>
-																									<option value="3">الجزائر</option>
-																									<option value="4">بومرداس</option>
-																								</select>
-																							</div>
-																						</div>
-																						<label for="price">
-																							السعر
-																						</label>
-																						<input type="number" required placeholder="السعر" name="price" minlength="1">
-																						<div><label for="description">الوصف</label></div>
-																						<div id="desc">
-																							<textarea name="body" id="description" placeholder="اكتب شيئا ..."></textarea>
-																						</div>
-																						<div class="uploadimages-pick">
-																							<output class="uploadimages" id="result">
-																							</output>
-																							<div class="uploadimages-btn custom-input-file">
-																								اضف صور
-																								<input type="file" name="files[]" id="files" multiple accept="image/jpeg, image/png, image/jpg">
-																							</div>
-																						</div>
-																					</div>
-																					<input class="btn" type="submit" name="submit" value="انشاء منشور" />
-																				</form>
+																			<form action="<?= ROOT ?>add-post-logic.php" method="POST" enctype="multipart/form-data">
+																			<div class="form-inputs">
+																			<label for="title">
+																				العنوان
+																			</label>
+																			<input class="input-f" type="text" required placeholder="اعط عنوان للمنشور" name="title" autofocus minlength="5"
+																				maxlength="50">
+																			<div id="select">
+																				<div>
+																					<label for="sellOrRent">نوع المعاملة</label>
+																					<select class="one" id="sellORrent" name="type">
+																						<option value="للكراء">كراء</option>
+																						<option value="للبيع">بيع</option>
+																					</select>
+																				</div>
+																				<div>
+																			<label for="wilaya">الولاية</label>
+																			<select class="one" id="wilaya" name="wilaya">
+																					<option value="1">الجلفة</option>
+																					<option value="2">وهران</option>
+																					<option value="3">الجزائر</option>
+																					<option value="4">بومرداس</option>
+																				</select>
+																			</div>
+																			</div>
+																			<label for="price">
+																				السعر
+																			</label>
+																			<input type="number" required placeholder="السعر" name="price" minlength="1">
+																			<div><label for="description">الوصف</label></div>
+																			<div id="desc">
+																			<textarea name="body" id="description" placeholder="اكتب شيئا ..."></textarea>
+																			</div>
+																			<div class="uploadimages-pick">
+																			<output class="uploadimages" id="result">
+																			</output>
+																			<div class="uploadimages-btn custom-input-file">
+																						اضف صور
+																			<input type="file" name="files[]" id="files" multiple accept="image/jpeg, image/png, image/jpg">
+																			</div>
+																			</div>
+																			</div>
+																			<input class="btn" type="submit" name="submit" value="انشاء منشور" />
+																			</form>
 																	</script></code></pre>
 																</section>
 										<section data-auto-animate>
@@ -499,70 +526,70 @@ $posts = mysqli_query($connection, $query);
 									
 									<p>this is the logic of fetch post from db</p>
 											<h4>php</h4>
-											<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers=""><script type="text/template">
+											<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|28-35|"><script type="text/template">
 <div class="posts-parent">
-            <?php while ($post = mysqli_fetch_assoc($posts)) : ?>
-                <?php if ($post['type'] == "للبيع") : ?>
-                    <div class="post  type-all type-buy">
-                    <?php else : ?>
-                        <div class="post  type-all type-rent">
-                        <?php endif ?>
-                        <div class="post-header">
-                            <div class="type ">
-                                <?= $post['type'] ?>
-                            </div>
-                            <div class="post_author">
-                                <div class="post_author-info">
-                                    <h5>
-                                        <?= $post['name'] ?>
-                                    </h5>
-                                    <small><?= date("H:i - d M, y", strtotime($post['data_time'])) ?></small>
-                                </div>
-                                <a href="<?= ROOT ?>user_profil.php?id=<?= $post['user_id'] ?>">
-                                    <div class="avatar">
-                                        <img src="./images/<?= $post['avatar'] ?>" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="images">
-                            <?php
-                            // fetch author from users table using author_id Emax editor  P5tutorial
-                            $post_id = $post['post_id'];
-                            $imageQuery = "SELECT * FROM `images` WHERE $post_id  = images.post_id LIMIT 1";
-                            $image_result = mysqli_query($connection, $imageQuery);
-                            $image = mysqli_fetch_assoc($image_result);
-                            ?>
-                            <img src="<?= ROOT ?>images/<?= $image['imageName'] ?>" alt="">
-                        </div>
-                        <a href="<?= ROOT ?>singl-post.php?id=<?= $post['post_id'] ?>" class="title">
-                            <div>
-                                <?php if (strlen($post['title']) >= 50) : ?>
-                                    <?= substr($post['title'], 0, 40) ?> ...
-                                <?php else : ?>
-                                    <?= $post['title'] ?>
-                                <?php endif ?>
-                            </div>
-                        </a>
-                        <div class="description">
-                            <?php if (strlen($post['body']) >= 200) : ?>
-                                <?= substr($post['body'], 0, 150) ?> ...
-                            <?php else : ?>
-                                <?= $post['body'] ?>
-                            <?php endif ?>
-                        </div>
-                        <div class="post_footer">
-                            <div class="price">
-                                <?= $post['price']  ?>
-                                دج
-                            </div>
-                            <div class="wilay">
-                                <?= $post['wilayName']  ?>
-                            </div>
-                        </div>
-                        </div>
-                    <?php endwhile ?>
-                    </div>
+<?php while ($post = mysqli_fetch_assoc($posts)) : ?>
+<?php if ($post['type'] == "للبيع") : ?>
+<div class="post  type-all type-buy">
+<?php else : ?>
+		<div class="post  type-all type-rent">
+		<?php endif ?>
+		<div class="post-header">
+				<div class="type ">
+						<?= $post['type'] ?>
+				</div>
+				<div class="post_author">
+						<div class="post_author-info">
+								<h5>
+										<?= $post['name'] ?>
+								</h5>
+								<small><?= date("H:i - d M, y", strtotime($post['data_time'])) ?></small>
+						</div>
+						<a href="<?= ROOT ?>user_profil.php?id=<?= $post['user_id'] ?>">
+								<div class="avatar">
+										<img src="./images/<?= $post['avatar'] ?>" alt="">
+								</div>
+						</a>
+				</div>
+		</div>
+		<div class="images">
+				<?php
+				// fetch author from users table using author_id Emax editor  P5tutorial
+				$post_id = $post['post_id'];
+				$imageQuery = "SELECT * FROM `images` WHERE $post_id  = images.post_id LIMIT 1";
+				$image_result = mysqli_query($connection, $imageQuery);
+				$image = mysqli_fetch_assoc($image_result);
+				?>
+				<img src="<?= ROOT ?>images/<?= $image['imageName'] ?>" alt="">
+		</div>
+		<a href="<?= ROOT ?>singl-post.php?id=<?= $post['post_id'] ?>" class="title">
+				<div>
+						<?php if (strlen($post['title']) >= 50) : ?>
+								<?= substr($post['title'], 0, 40) ?> ...
+						<?php else : ?>
+								<?= $post['title'] ?>
+						<?php endif ?>
+				</div>
+		</a>
+		<div class="description">
+				<?php if (strlen($post['body']) >= 200) : ?>
+						<?= substr($post['body'], 0, 150) ?> ...
+				<?php else : ?>
+						<?= $post['body'] ?>
+				<?php endif ?>
+		</div>
+		<div class="post_footer">
+				<div class="price">
+						<?= $post['price']  ?>
+						دج
+				</div>
+				<div class="wilay">
+						<?= $post['wilayName']  ?>
+				</div>
+		</div>
+		</div>
+<?php endwhile ?>
+</div>
         
 																	</script></code></pre>
 										</section>
@@ -576,9 +603,9 @@ $posts = mysqli_query($connection, $query);
 
 
 
-									<section>
-										<h2>thank you </h2>
-									</section>
+										<section data-background-image="images/background image.jpg">
+											<img src="images/THANKS ALL.png" alt="">
+										</section>
 									<section>
 										<h2>if you have any question don't hesitate to use stack overflow</h2>
 									</section>
@@ -601,7 +628,7 @@ $posts = mysqli_query($connection, $query);
 					backgroundTransition: 'zoom',
 					
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [  RevealZoom, RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
 	</body>
